@@ -90,7 +90,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: ${{ env.OUTPUT_NAME }}
-        path: ${{ env.OUTPUT_NAME }}.zip
+        path: ../${{ env.OUTPUT_NAME }}.zip
 
   # 创建 Release
   create-release:
