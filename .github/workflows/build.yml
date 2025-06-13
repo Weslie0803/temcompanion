@@ -51,6 +51,7 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
         
     - name: Build application
+      shell: bash
       run: |
         # 根据操作系统设置路径分隔符
         if [ "$RUNNER_OS" == "Windows" ]; then
@@ -74,6 +75,7 @@ jobs:
         
     # 创建 ZIP 压缩包
     - name: Create release package
+      shell: bash
       run: |
         cd dist
         if [ "$RUNNER_OS" == "Windows" ]; then
