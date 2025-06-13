@@ -32,7 +32,8 @@ jobs:
       if: runner.os == 'macOS'
       run: |
         brew install libomp
-        sudo xcode-select -s /Applications/Xcode_14.3.app/Contents/Developer
+        # Use the default developer directory, or specify the correct Xcode version
+        sudo xcode-select -p || sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
         
     # Windows 特定依赖
     - name: Install Windows dependencies
