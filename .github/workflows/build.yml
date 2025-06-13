@@ -23,6 +23,7 @@ jobs:
         
     # 设置版本号 (从标签获取)
     - name: Set version number
+      shell: bash
       run: |
         VERSION=${GITHUB_REF#refs/tags/v}
         echo "APP_VERSION=$VERSION" >> $GITHUB_ENV
