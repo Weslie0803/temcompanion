@@ -100,8 +100,9 @@ jobs:
     
     steps:
     - name: Download all artifacts
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
+        name: ${{ env.OUTPUT_NAME }}
         path: artifacts
         
     - name: Create GitHub Release
@@ -118,6 +119,6 @@ jobs:
           
           自动生成于 ${{ github.event.head_commit.timestamp }}
         files: |
-          artifacts/MyApp_*/
+          artifacts/TEMCompanion_*/
         draft: false
         prerelease: false
