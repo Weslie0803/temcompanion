@@ -40,7 +40,7 @@ jobs:
     - name: Install Windows dependencies
       if: runner.os == 'Windows'
       run: |
-        choco install vcredist2019 -y
+        choco install vcredist140 -y
         
     - name: Install Python dependencies
       run: |
