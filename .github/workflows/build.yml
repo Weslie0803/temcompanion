@@ -85,7 +85,10 @@ jobs:
         fi
         cd ..
         
-    # 上传构建产物作为工件
+    # 确认文件已在根目录
+    - name: List files for debug
+      run: ls -l
+    
     - name: Upload build artifact
       uses: actions/upload-artifact@v4
       with:
