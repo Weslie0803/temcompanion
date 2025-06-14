@@ -87,11 +87,13 @@ jobs:
         
     # 确认文件已在根目录
     - name: List files for debug
+      shell: bash
       run: | 
         ls -l
         ls -l dist
 
     - name: Echo output name
+      shell: bash
       run: echo $OUTPUT_NAME
     
     - name: Upload build artifact
