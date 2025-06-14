@@ -124,11 +124,11 @@ jobs:
           ### 版本 ${{ github.ref_name }}
           
           包含以下平台的可执行文件：
-          - Windows: MyApp_Windows_v${{ env.APP_VERSION }}.zip
-          - macOS: MyApp_macOS_v${{ env.APP_VERSION }}.zip
+          - Windows: TEMCompanion_Windows_v${{ env.APP_VERSION }}.zip
+          - macOS: TEMCompanion_macOS_v${{ env.APP_VERSION }}.zip
           
           自动生成于 ${{ github.event.head_commit.timestamp }}
         files: |
-          artifacts/TEMCompanion_*/
+          artifacts/*.zip
         draft: false
         prerelease: false
