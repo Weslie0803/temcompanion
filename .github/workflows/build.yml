@@ -61,6 +61,7 @@ jobs:
           SEPARATOR=":"
           OUTPUT_NAME="TEMCompanion_macOS_v${APP_VERSION}"
         fi
+        echo "OUTPUT_NAME=$OUTPUT_NAME" >> $GITHUB_ENV
         
         pyinstaller --noconfirm --onefile --windowed \
           --name "$OUTPUT_NAME" \
