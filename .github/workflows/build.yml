@@ -119,7 +119,7 @@ jobs:
       with:
         tag_name: ${{ github.ref_name }}
         name: Release ${{ github.ref_name }}
-        files: artifacts/*.zip
+        files: artifacts/**/*.zip
         draft: false
         prerelease: false
         body: |
