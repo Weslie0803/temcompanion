@@ -87,7 +87,12 @@ jobs:
         
     # 确认文件已在根目录
     - name: List files for debug
-      run: ls -l
+      run: | 
+        ls -l
+        ls -l dist
+
+    - name: Echo output name
+      run: echo $OUTPUT_NAME
     
     - name: Upload build artifact
       uses: actions/upload-artifact@v4
