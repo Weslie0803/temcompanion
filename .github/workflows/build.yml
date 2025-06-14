@@ -77,14 +77,13 @@ jobs:
     - name: Create release package
       shell: bash
       run: |
-        cd dist
         if [ "$RUNNER_OS" == "Windows" ]; then
-          7z a -r ../$OUTPUT_NAME.zip *
+          7z a -r $OUTPUT_NAME.zip dist/*
         else
-          zip -r ../$OUTPUT_NAME.zip *
+          zip -r $OUTPUT_NAME.zip dist/*
         fi
-        cd ..
-        
+        ls -l
+            
     # 确认文件已在根目录
     - name: List files for debug
       shell: bash
